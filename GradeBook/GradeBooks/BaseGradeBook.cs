@@ -20,6 +20,11 @@ namespace GradeBook.GradeBooks
             Students = new List<Student>();
         }
 
+        public GradeBookType Type
+        {
+            get; set;
+        }
+
         public void AddStudent(Student student)
         {
             if (string.IsNullOrEmpty(student.Name))
@@ -266,5 +271,6 @@ namespace GradeBook.GradeBooks
             
             return JsonConvert.DeserializeObject(json, gradebook);
         }
+        
     }
 }
