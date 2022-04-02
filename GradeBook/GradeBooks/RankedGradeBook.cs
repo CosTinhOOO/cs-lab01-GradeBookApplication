@@ -12,7 +12,7 @@ namespace GradeBook.GradeBooks
         }
         public override char GetLetterGrade(double averageGrade)
         {
-            double top20 = Students.Count * 0.2;
+            double N = Students.Count * 0.2;
             double top40 = Students.Count * 0.4;
             double top60 = Students.Count * 0.6;
             double top80 = Students.Count * 0.8;
@@ -30,19 +30,19 @@ namespace GradeBook.GradeBooks
             {
                 throw new InvalidOperationException();
             }
-            else if (i < top20)
+            else if (i < N)
             {
                 return 'A';
             }
-            else if(i <  top40 && i > top20)
+            else if(i <  2*N)
             {
                 return 'B';
             }
-            else if (i > top40 && i < top60)
+            else if (i < 3*N)
             {
                 return 'C';
             }
-            else if (i > top60 && i < top80)
+            else if (i < 4*N)
             {
                 return 'D';
             }
