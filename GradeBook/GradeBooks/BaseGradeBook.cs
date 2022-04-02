@@ -71,6 +71,11 @@ namespace GradeBook.GradeBooks
             student.RemoveGrade(score);
         }
 
+        internal void CalculateStudentStatistics()
+        {
+            throw new NotImplementedException();
+        }
+
         public void ListStudents()
         {
             foreach (var student in Students)
