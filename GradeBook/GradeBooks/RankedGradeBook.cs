@@ -6,16 +6,13 @@ namespace GradeBook.GradeBooks
 {
     public class RankedGradeBook : BaseGradeBook
     {
-        public RankedGradeBook(string name) : base(name)
+        public RankedGradeBook(string name, bool IsWeighted) : base(name, IsWeighted)
         {
             Type = Enums.GradeBookType.Ranked;
         }
         public override char GetLetterGrade(double averageGrade)
         {
             double N = Students.Count * 0.2;
-            double top40 = Students.Count * 0.4;
-            double top60 = Students.Count * 0.6;
-            double top80 = Students.Count * 0.8;
 
             List<double> grades = new List<double>();
             List<double> gradesSorted = new List<double>();
